@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 33% 96%;
+    --foreground: 20 10% 10%;
+    
+    --card: 43 33% 96%;
+    --card-foreground: 20 10% 10%;
+    
+    --popover: 43 33% 96%;
+    --popover-foreground: 20 10% 10%;
+    
+    --primary: 151 15% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 43 33% 96%;
+    --secondary-foreground: 20 10% 10%;
+    
+    --muted: 151 15% 93%;
+    --muted-foreground: 20 10% 40%;
+    
+    --accent: 151 25% 23%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 151 15% 90%;
+    --input: 151 15% 90%;
+    --ring: 151 15% 53%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
