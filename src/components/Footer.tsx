@@ -26,11 +26,6 @@ const Footer = () => {
                   Shop
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="hover:text-accent-foreground/80">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
           
